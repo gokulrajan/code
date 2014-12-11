@@ -44,7 +44,7 @@ void Graph::BFSUtil(int s ,bool visited[])
 		if(!visited[*i])
 		{
 			visited[*i]=true;
-		}
+		
 			q.push(*i);
 		}
 	}
