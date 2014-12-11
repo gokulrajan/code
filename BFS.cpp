@@ -42,7 +42,11 @@ void Graph::BFSUtil(int s ,bool visited[])
 	for(i=adj[s].begin();i!=adj[s].end();i++)
 	{
 		if(!visited[*i])
+		{
+			visited[*i]=true;
+		}
 			q.push(*i);
+		}
 	}
 	
 while(!q.empty())
@@ -76,7 +80,7 @@ int main() {
     g.addEdge(3, 3);
  
     cout << "Following is Breadth First Traversal (starting from vertex 2) \n";
-    g.BFS(2);
+    g.BFS(0);
  
     return 0;
 }
